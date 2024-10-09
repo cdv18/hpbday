@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-wrapper">
+          <marquee scrollamount="40" scrolldelay="10" class="birthday-text">
+            <div class="names brazil">
+              <div class="name_container _1">
+                <div class="name_container_name name" data-name="Pelé">
+                  <span>Chúc mừng sinh nhật chị gái nhé!!</span>
+                </div>
+              </div>
+            </div>
+          </marquee>
+      </div>
+
+    </div>
+    </div>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary_color: #ffc066;
+        --secondary_color: #374f1f;
+        --card-color: #f2e3cd;
+        --bg_color: #2331a0;
+        --third: #6ca9c1;
+        --white: #eee;
+        --dark-grey: #555;
+        --black: #333;
+      }
+
+      .brazil {
+        --primary_color: #ffc066;
+        --secondary_color: #6c772e;
+        --third_color: #2a4368;
+      }
+
+      .urss {
+        --secondary_color: #ff4f4f;
+        --primary_color: #ffc066;
+        --third_color: #333;
+      }
+
+      .argentina {
+        --primary_color: #eee;
+        --secondary_color: #7cc1f9;
+        --third_color: #333;
+      }
+
+      .france {
+        --primary_color: #ff4f4f;
+        --secondary_color: #2a4368;
+        --third_color: #eee;
+      }
+
+      .italy {
+        --primary_color: #ff4f4f;
+        --secondary_color: #6c772e;
+        --third_color: #eee;
+      }
+
+      .spain {
+        --primary_color: #ff4f4f;
+        --secondary_color: #ffc066;
+        --third_color: #eee;
+      }
+
+      .england {
+        --primary_color: #eee;
+        --secondary_color: #ff4f4f;
+        --third_color: #333;
+      }
+
+      .germany {
+        --primary_color: #ff4f4f;
+        --secondary_color: #ffc066;
+        --third_color: #eee;
+      }
+
+      body {
+        font-size: 62.5%;
+        font-family: roboto;
+        width: 100vw;
+        background-color: var(--primary_color);
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+      }
+
+      .names {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        margin: 20px 15px;
+        border-radius: 10px;
+        /* border:4px solid var(--black); */
+        /* box-shadow: 14px 14px 0px 0px var(--black); */
+        width: 900px;
+      }
+
+      .name_container {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 59em;
+        position: relative;
+        width: 100%;
+      }
+
+      .name_container_name {
+        font-size: 2em;
+        font-weight: 900;
+        color: var(--secondary_color);
+      }
+
+      .name_container._1 .name_container_name {
+        color: var(--primary_color);
+        filter: drop-shadow(6px 6px 0px var(--secondary_color))
+          drop-shadow(6px 6px 0px var(--third_color));
+
+        & span {
+          -webkit-text-stroke: 4px var(--black);
+        }
+      }
+
+      body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+      }
+      /* From Uiverse.io by uiverse-astronaut */
+      .container {
+        width: 100%;
+        height: 100%;
+        --color1: rgb(108, 231, 221);
+        --color2: rgb(250, 255, 178);
+        background-color: var(--color1);
+        background-image: linear-gradient(
+            45deg,
+            var(--color2) 25%,
+            transparent 25%,
+            transparent 75%,
+            var(--color2) 75%,
+            var(--color2)
+          ),
+          linear-gradient(
+            45deg,
+            var(--color2) 25%,
+            var(--color1) 25%,
+            var(--color1) 75%,
+            var(--color2) 75%,
+            var(--color2)
+          );
+        background-size: 60px 60px;
+        background-position: 0 0, 30px 30px;
+        animation: moveBackground 1s linear infinite;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      @keyframes moveBackground {
+            0% {
+                background-position: 0 0, 30px 30px;
+            }
+            100% {
+                background-position: 60px 60px, 90px 90px;
+            }
+        }
+
+      .text-wrapper {
+        position: absolute;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .scrolling-text {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scrollText 10s linear infinite;
+      }
+
+      .birthday-text {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #ff6b6b;
+        padding-right: 50px; /* Space between repeated texts */
+      }
+
+      @keyframes scrollText {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </body>
+</html>
